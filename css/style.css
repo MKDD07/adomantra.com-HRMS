@@ -5792,6 +5792,206 @@ margin-right: 12px;
   border-radius: 6px;
 }
 
+/* Distinct Card Designs */
+/* 1. Real-Time Attendance & Geo-Lock */
+.geo-punch-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+}
+.geo-punch-time {
+  font-size: 20px;
+  font-weight: 800;
+  color: #166534;
+  letter-spacing: -0.5px;
+}
+.geo-punch-sub {
+  font-size: 10px;
+  color: #15803D;
+  font-weight: 500;
+}
+.geo-radar-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #DCFCE7;
+  color: #166534;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+.radar-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22C55E;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: radarPulse 1.8s infinite;
+}
+@keyframes radarPulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* 2. KRA, KPI & Task Progress Bars */
+.kra-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+.kra-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.kra-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: #374151;
+}
+.kra-bar-track {
+  width: 100%;
+  height: 6px;
+  background: #E5E7EB;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.kra-bar-fill {
+  height: 100%;
+  border-radius: 100px;
+}
+.kra-bar-fill.blue { background: #2563EB; }
+.kra-bar-fill.purple { background: var(--primary-color); }
+.kra-bar-fill.green { background: #16A34A; }
+
+/* 3. Payroll Ledger Breakdown */
+.payroll-breakdown-card {
+  background: #F9FAFB;
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid #E5E7EB;
+}
+.payroll-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px dashed #D1D5DB;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.payroll-total-val {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111827;
+}
+.payroll-row-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  padding: 3px 0;
+  color: #4B5563;
+}
+.payroll-row-item.deduct { color: #DC2626; font-weight: 600; }
+.payroll-row-item.add { color: #16A34A; font-weight: 600; }
+
+/* 4. Analytics Real SVG Graph & BI Metrics */
+.analytics-chart-container {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+.chart-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+.chart-trend-tag {
+  font-size: 10px;
+  color: #16A34A;
+  background: #DCFCE7;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.analytics-svg-graph {
+  width: 100%;
+  height: 70px;
+  display: block;
+}
+.bi-kpi-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.bi-kpi-chip {
+  background: #FFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  padding: 6px 8px;
+  text-align: left;
+}
+.bi-kpi-chip .chip-num {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--primary-color);
+  display: block;
+}
+.bi-kpi-chip .chip-lbl {
+  font-size: 10px;
+  color: #6B7280;
+}
+
+/* 5. Document Locker Vault */
+.doc-vault-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.doc-vault-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 11px;
+}
+.doc-vault-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1F2937;
+  font-weight: 600;
+}
+.doc-vault-left i {
+  color: var(--primary-color);
+}
+.doc-badge-status {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #DCFCE7;
+  color: #15803D;
+}
+
 /* RIGHT COLUMN: Scrolling Snippets */
 .leave-right-snippets-col {
   display: flex;
