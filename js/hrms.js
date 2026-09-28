@@ -767,7 +767,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ctaText: "Centralize Your Records",
       ctaLink: "#heroContactForm",
       primaryImage: {
-        query: "stressed hr manager looking at messy paperwork spreadsheets laptop desk",
+        query: "Close-up of a laptop during a team meeting in New York, showcasing collaboration and technology.",
         alt: "Scattered Employee Records Problem",
         fallback: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop&q=80"
       },
@@ -805,7 +805,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ctaText: "Automate Attendance & Admin",
       ctaLink: "#heroContactForm",
       primaryImage: {
-        query: "clock in clock out mobile phone application team tracking attendance office",
+        query: "A businesswoman typing on a laptop in an office setting, using Slack for communication.",
         alt: "Automated Attendance and HR Admin",
         fallback: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=80"
       },
@@ -845,7 +845,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ctaText: "Unify Your Workforce",
       ctaLink: "#heroContactForm",
       primaryImage: {
-        query: "diverse business team collaborating discussion digital tablet office workspace",
+        query: "Man working remotely at a desk with a laptop open to a calendar app.",
         alt: "Connected HR Teams and Employees",
         fallback: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80"
       },
