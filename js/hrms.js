@@ -748,123 +748,122 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ============================================================
-  // 3 FEATURE SHOWCASE BANNERS (JSON CONST & DYNAMIC INNERHTML)
-  // Left/Right alternating layouts, 3 images/cards per banner, 
-  // bullet checkmarks, and CTA buttons matching Multiplier design.
+  // THE HR PROBLEMS ADOTEAM SOLVES - 3 SHOWCASE BANNERS
+  // Left/Right alternating layouts, 3 images/cards per banner,
+  // problem/solution bullet checkmarks, and theme visual cards.
   // ============================================================
   const showcaseBannersData = [
     {
-      id: "banner-payroll",
+      id: "banner-scattered-records",
       layout: "image-left", // Left: Media & Floating Badges, Right: Copy
-      tagline: "Payroll & Statutory Compliance",
-      headline: "Simple, accurate payroll your team can count on",
-      description: "Automate month-end payroll without the spreadsheets or calculation headaches. AdoTeam connects attendance, leave, and tax rules to deliver on-time, compliant salary disbursements every single cycle.",
+      tagline: "Problem 01: Fragmented Systems",
+      headline: "Scattered Employee Records",
+      description: "Employee information spread across spreadsheets, emails, and multiple files creates silos, lost paperwork, and compliance chaos across your organization.",
       bulletPoints: [
-        "1-Click payroll calculation linked directly to attendance & leaves",
-        "Automated PF, ESI, PT & TDS statutory tax deductions",
-        "Password-protected digital salary slips delivered straight to employees"
+        "Eliminate messy Excel sheets & duplicate employee profile entries",
+        "Single source of truth for digital KYC, contracts, docs & histories",
+        "Role-based secure access so data reaches only verified managers"
       ],
-      ctaText: "Book a Demo",
+      ctaText: "Centralize Your Records",
       ctaLink: "#heroContactForm",
       primaryImage: {
-        query: "financial payroll dashboard charts on laptop screen modern workspace desk",
-        alt: "Payroll & Statutory Compliance Dashboard",
-        fallback: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
+        query: "stressed hr manager looking at messy paperwork spreadsheets laptop desk",
+        alt: "Scattered Employee Records Problem",
+        fallback: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop&q=80"
       },
       floatingCards: [
         {
           type: "payroll-table",
           position: "bottom-left",
-          title: "Monthly Disbursement",
-          badge: "Verified",
+          title: "Unified Digital Dossiers",
+          badge: "100% Synced",
           rows: [
-            { flag: "🇮🇳", country: "Operations & Tech", prefix: "₹", rawVal: 1842000, decimals: 2, amount: "₹18,42,000.00", avatars: ["https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face", "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face", "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&crop=face"] },
-            { flag: "🇮🇳", country: "Sales & Field Staff", prefix: "₹", rawVal: 1264500, decimals: 2, amount: "₹12,64,500.00", avatars: ["https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=face", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=60&h=60&fit=crop&crop=face"] },
-            { flag: "🇮🇳", country: "Corporate & Admin", prefix: "₹", rawVal: 685200, decimals: 2, amount: "₹6,85,200.00", avatars: ["https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=60&h=60&fit=crop&crop=face", "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=60&h=60&fit=crop&crop=face", "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=60&h=60&fit=crop&crop=face"] }
+            { lucideIcon: "folder-archive", iconBg: "rgba(18, 87, 162, 0.12)", iconColor: "#1257A2", country: "Employee Records", prefix: "✓ ", rawVal: 1250, decimals: 0, amount: "1,250 Profiles", avatars: ["https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face", "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face", "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&crop=face"] },
+            { lucideIcon: "file-check-2", iconBg: "rgba(16, 185, 129, 0.12)", iconColor: "#059669", country: "Statutory & KYC", prefix: "✓ ", rawVal: 100, decimals: 0, amount: "100% Verified", avatars: ["https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=face", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=60&h=60&fit=crop&crop=face"] },
+            { lucideIcon: "shield-alert", iconBg: "rgba(249, 115, 22, 0.12)", iconColor: "#EA580C", country: "Access Governance", prefix: "✓ ", rawVal: 0, decimals: 0, amount: "Zero Leakage", avatars: ["https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=60&h=60&fit=crop&crop=face", "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=60&h=60&fit=crop&crop=face"] }
           ]
         },
         {
           type: "stat-chip",
           position: "top-right",
-          lucideIcon: "shield-check",
-          title: "100% Compliant"
+          lucideIcon: "folder-check",
+          title: "Zero Lost Files"
         }
       ]
     },
     {
-      id: "banner-unified-platform",
+      id: "banner-attendance-admin",
       layout: "image-right", // Left: Copy, Right: Media & Stepper UI
-      tagline: "Everything In One Place",
-      headline: "One simple place for attendance, leave & payroll",
-      description: "Stop jumping between messy spreadsheets and disconnected tools. AdoTeam brings your daily attendance, leave approvals, employee records, and payroll into one easy system your staff will actually enjoy using.",
+      tagline: "Problem 02: Inefficiencies & Friction",
+      headline: "Time-Consuming Attendance & Repetitive HR Admin",
+      description: "Manual attendance, leave tracking, and repetitive follow-ups waste hours of HR time that should be spent on people and high-value business priorities.",
       bulletPoints: [
-        "Attendance and leave data flow straight into payroll automatically",
-        "Clear self-service access for staff to request time-off & check slips",
-        "Built-in compliance checks for PF, ESI, and tax deductions with zero fuss"
+        "Replace biometric queues & manual logbooks with instant geo-fenced mobile punches",
+        "Automated multi-tier leave approvals directly routed to reporting managers",
+        "Cut 75% of routine admin headaches and month-end reconciliation fire-drills"
       ],
-      ctaText: "See How It Works",
+      ctaText: "Automate Attendance & Admin",
       ctaLink: "#heroContactForm",
       primaryImage: {
-        query: "laptop screen showing modern software application analytics desk workspace",
-        alt: "Unified HRMS Dashboard on Laptop",
-        fallback: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80"
+        query: "clock in clock out mobile phone application team tracking attendance office",
+        alt: "Automated Attendance and HR Admin",
+        fallback: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=80"
       },
       floatingCards: [
         {
           type: "workflow-stepper",
           position: "top-left",
           steps: [
-            { icon: "fa-solid fa-user-check", title: "Employee Onboarded", sub: "Digital KYC Verified", active: true, color: "#1257A2" },
-            { icon: "fa-solid fa-calculator", title: "Automated Payroll", sub: "Gross-to-Net Computed", active: true, color: "#3B82F6" },
-            { icon: "fa-solid fa-coins", title: "Statutory Disbursal", sub: "Bank & Tax API Synced", active: true, color: "#06B6D4" }
+            { icon: "fa-solid fa-clock-rotate-left", title: "Manual Check-in Removed", sub: "100% Geo-Fenced Mobile Punch", active: true, color: "#1257A2" },
+            { icon: "fa-solid fa-calendar-check", title: "Leave Autopilot", sub: "Instant 1-Click Multi-Tier Approval", active: true, color: "#3B82F6" },
+            { icon: "fa-solid fa-bolt", title: "Admin Hours Saved", sub: "Auto Synced with 1-Click Payroll", active: true, color: "#10B981" }
           ]
         },
         {
           type: "currency-list",
           position: "bottom-right",
-          title: "Department Payroll",
+          title: "Productivity Recaptured",
           items: [
-            { lucideIcon: "briefcase", label: "Engineering & Tech", prefix: "₹", rawVal: 1850000, decimals: 0, value: "₹18,50,000", progress: 95 },
-            { lucideIcon: "trending-up", label: "Sales & Field Ops", prefix: "₹", rawVal: 1240000, decimals: 0, value: "₹12,40,000", progress: 85 },
-            { lucideIcon: "target", label: "Marketing & Growth", prefix: "₹", rawVal: 820000, decimals: 0, value: "₹8,20,000", progress: 75 },
-            { lucideIcon: "building-2", label: "HR & Operations", prefix: "₹", rawVal: 540000, decimals: 0, value: "₹5,40,000", progress: 90 }
+            { lucideIcon: "clock", label: "Leave Approval Speed", prefix: "", rawVal: 4, decimals: 0, value: "< 4 Hours", progress: 95 },
+            { lucideIcon: "check-circle-2", label: "Attendance Sync Rate", prefix: "", rawVal: 100, decimals: 0, value: "100% Auto", progress: 100 },
+            { lucideIcon: "shield-check", label: "Zero Buddy Punching", prefix: "", rawVal: 99, decimals: 1, value: "99.8% Geo-Lock", progress: 98 }
           ]
         }
       ]
     },
     {
-      id: "banner-geo-attendance",
-      layout: "image-left", // Left: Media & Anti-Spoofing UI, Right: Copy
-      tagline: "Smart Mobile Attendance",
-      headline: "Anti-Spoofing Geo-Fencing & Biometric Sync",
-      description: "Empower your field force, hybrid employees, and branch offices with tamper-proof mobile clock-ins. Set precise virtual GPS boundaries from 10m to 500m with AI facial liveness detection and instant cloud biometric synchronization.",
+      id: "banner-disconnected-teams",
+      layout: "image-left", // Left: Media & Radar UI, Right: Copy
+      tagline: "Problem 03: Communication Silos",
+      headline: "Disconnected Teams & Misaligned Workflows",
+      description: "Employees and HR teams struggle to stay aligned on requests, updates, and policies when communication happens across separate chat apps and informal threads.",
       bulletPoints: [
-        "99.8% precision GPS perimeter with zero buddy punching",
-        "Instant synchronization with ZKTeco, eSSL & biometric hardware",
-        "Offline punch caching with automatic background retry sync"
+        "Transparent self-service portal for requests, shift rosters, policies & payslips",
+        "Real-time notifications keeping employees and managers aligned instantly",
+        "Connect on-site, hybrid, and remote field workforce on a single unified cloud"
       ],
-      ctaText: "Schedule Attendance Demo",
+      ctaText: "Unify Your Workforce",
       ctaLink: "#heroContactForm",
       primaryImage: {
-        query: "hand holding smartphone with map location gps tracking technology",
-        alt: "Mobile Geo-Punch Attendance App",
-        fallback: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=80"
+        query: "diverse business team collaborating discussion digital tablet office workspace",
+        alt: "Connected HR Teams and Employees",
+        fallback: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80"
       },
       floatingCards: [
         {
           type: "geo-tracker",
           position: "bottom-left",
-          title: "Live Geo-Fence Status",
-          badge: "Active Radar",
-          perimeter: "Office Perimeter: 50m Radius",
-          coords: "28.6139° N, 77.2090° E",
-          status: "Verified On-Premise"
+          title: "Workforce Connectivity Hub",
+          badge: "Unified Radar",
+          perimeter: "All 9 Modules Synchronized",
+          coords: "100% Self-Service Portal",
+          status: "Team Fully Aligned"
         },
         {
           type: "stat-chip",
           position: "top-right",
-          lucideIcon: "crosshair",
-          title: "99.8% Accuracy"
+          lucideIcon: "users",
+          title: "Seamless Alignment"
         }
       ]
     }
@@ -894,7 +893,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${fc.rows.map(r => `
                   <div class="sbc-table-row">
                     <div class="sbc-tr-left">
-                      <span class="sbc-flag">${r.flag}</span>
+                      <span class="sbc-flag sbc-icon-badge" style="background: ${r.iconBg || 'rgba(18, 87, 162, 0.1)'}; color: ${r.iconColor || 'var(--color-primary)'}; width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        ${r.lucideIcon ? `<i data-lucide="${r.lucideIcon}"></i>` : (r.icon ? `<i class="${r.icon}"></i>` : (r.flag || ''))}
+                      </span>
                       <div class="sbc-avatar-group">
                         ${r.avatars.map(av => `<img src="${av}" alt="Employee" class="sbc-avatar" loading="lazy" />`).join("")}
                       </div>
@@ -1013,6 +1014,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Copy Column
       const copyColumn = `
         <div class="showcase-banner-copy-col">
+          ${banner.tagline ? `<span class="sbc-tagline">${banner.tagline}</span>` : ""}
           <h2>${banner.headline}</h2>
           <p>${banner.description}</p>
           <ul class="sbc-points-list">

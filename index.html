@@ -147,11 +147,22 @@
       </h1>
       <p class="lede">From Geo-Fenced Mobile Punch In/Out and 1-Click Automated Payroll to Multi-Tier Leave Workflows — AdoTeam unifies all 9 core workforce modules on a single intuitive cloud platform.</p>
     </div>
-    <div class="hero-media hero-form-card" style="clip-path: none; opacity: 1;">
+    <!-- Mobile floating contact trigger (<576px) -->
+    <button type="button" class="hero-mobile-contact-trigger d-md-none" id="openHeroModalBtn" aria-label="Open contact form">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>Book Demo</span>
+    </button>
+    <!-- Dedicated mobile backdrop overlay -->
+    <div class="hero-modal-backdrop" id="heroModalBackdrop"></div>
+    <div class="hero-media hero-form-card" id="heroFormCardModal" style="clip-path: none; opacity: 1;">
+      <!-- Mobile modal close button -->
+      <button type="button" class="hero-form-close-btn" id="closeHeroModalBtn" aria-label="Close form">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
       <div class="hero-form-header">
         <span class="hero-form-eyebrow">Interactive Live Demo</span>
         <h3 class="hero-form-title">Schedule a Walkthrough</h3>
-        <p class="hero-form-desc">Get a personalized tour of AdoTeam tailored to your company's headcount and shift policies.</p>
+        <p class="hero-form-desc d-none d-lg-block">Get a personalized tour of AdoTeam tailored to your company's headcount and shift policies.</p>
       </div>
       <form id="heroContactForm" class="hero-contact-form" novalidate>
         <div class="hero-form-row">
@@ -295,11 +306,25 @@
     </div>
   </div>
 </div>
-<!-- ============ 3 FEATURE SHOWCASE BANNERS (DYNAMIC RENDER FROM JSON CONST) ============ -->
+<!-- ============ THE HR PROBLEMS ADOTEAM SOLVES (SHOWCASE BANNERS) ============ -->
 <section class="section showcase-banners-section" id="feature-banners">
   <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="eyebrow" style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">The HR Problems adoTeam Solves</span>
+      <h2 class="section-title mt-2">Still Managing HR the Hard Way?</h2>
+      <p class="section-subtitle mx-auto" style="max-width: 650px; color: #4B5563; font-size: 1.05rem; margin-top: 10px;">Highlighting the everyday challenges HR teams and business owners face before switching to automated cloud velocity.</p>
+    </div>
+    
     <div id="showcaseBannersContainer" class="showcase-banners-list">
       <!-- Dynamically hydrated via JavaScript from bannerData const with innerHTML -->
+    </div>
+
+    <!-- Section Closing Callout -->
+    <div class="showcase-closing-callout text-center mt-5 pt-4">
+      <div class="closing-callout-pill d-inline-flex align-items-center gap-2 px-4 py-3 rounded-pill">
+        <i class="fa-solid fa-sparkles text-primary"></i>
+        <span style="font-size: 1.05rem; font-weight: 600; color: #111827;">It's time to make HR <strong>simpler, smarter and more connected</strong> with adoTeam.</span>
+      </div>
     </div>
   </div>
 </section>
@@ -598,7 +623,7 @@
     <div class="section-header-row mb-5">
       <div>
         <span class="eyebrow" style="background: transparent; border: 1px solid rgba(18, 87, 162, 0.4); color: #70B4FF; padding: 6px 14px; border-radius: 100px;">Enterprise Architecture</span>
-        <h2 style="margin-top:16px;">Unified Suite of 9 Core HRMS Modules.</h2>
+        <h2 style="margin-top:16px;">Features That Make HR Feel Less Like Work</h2>
       </div>
       <p class="section-header-desc">Purpose-built for growing enterprises to automate GPS attendance, multi-state payroll, statutory tax governance, and paperless employee lifecycles on one connected operating system.</p>
     </div>

@@ -108,6 +108,11 @@ p { font-size: var(--p-size); font-weight: var(--weight-medium); line-height: 1.
 {
   max-width: 400px;
 }
+.showcase-banner-grid.grid-img-left .showcase-banner-copy-col h2, .showcase-banner-grid.grid-img-right .showcase-banner-copy-col h2
+{
+  width: 100%;
+  max-width: 100%;
+}
 /* ============ HEADER ============ */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
@@ -591,11 +596,128 @@ html.lenis, html.lenis body {
 }
 .hero-copy { color: var(--color-white); padding: 20px 0; display: block;}
 @media (max-width: 576px) {
-  .hero-copy
-  {
-    display: none;
+  /* Trigger button connected/docked on right edge, visible only in hero section */
+  .hero-mobile-contact-trigger {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    position: fixed;
+    top: calc(var(--header-h) + 16px);
+    right: 0;
+    z-index: 998;
+    padding: 8px 14px 8px 16px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: var(--color-primary);
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-right: none;
+    box-shadow: -4px 6px 18px rgba(18, 87, 162, 0.45);
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+  }
+  .hero-mobile-contact-trigger.is-hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateX(110%) !important;
+    pointer-events: none !important;
+  }
+  .hero-mobile-contact-trigger:active {
+    transform: scale(0.95);
+  }
+  .hero-mobile-contact-trigger i {
+    font-size: 0.85rem;
+  }
+
+  /* Fixed Backdrop Overlay set to 999 */
+  .hero-modal-backdrop {
+    display: block !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(10, 15, 30, 0.72) !important;
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+    z-index: 999 !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+  }
+  .hero-modal-backdrop.is-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* Fixed Hero Form Card Popup on top of overlay (z-index: 1000) */
+  .hero-media.hero-form-card {
+    position: fixed !important;
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    max-height: 86vh !important;
+    width: auto !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1000 !important;
+    padding: 24px 20px 28px !important;
+    border-radius: 24px !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+    transform: translateY(115%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+  }
+
+  .hero-media.hero-form-card.is-popup-open {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Close button on top corner */
+  .hero-form-close-btn {
+    display: flex !important;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #475569;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s, color 0.2s;
+  }
+  .hero-form-close-btn:hover {
+    background: var(--color-primary);
+    color: #fff;
   }
 }
+
+/* Default state for desktop (> 576px) */
+.hero-mobile-contact-trigger,
+.hero-modal-backdrop,
+.hero-form-close-btn {
+  display: none;
+}
+
+
 
 .hero-copy .eyebrow.banner { all: unset; color: var(--color-accent); margin-bottom: 24px; font-weight: 600; letter-spacing: 0.14em; }
 .hero-copy .eyebrow::before { background: var(--color-accent); }
@@ -674,6 +796,12 @@ html.lenis, html.lenis body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+@media (max-width: 576px){
+.hero-contact-form .hero-form-row 
+{
+gap: 0;
+}
 }
 .hero-contact-form .form-group {
   position: relative;
@@ -1702,12 +1830,32 @@ html.lenis, html.lenis body {
   padding: 10px 0;
 }
 
+.sbc-tagline {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: rgba(18, 87, 162, 0.08);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+} 
 
 .showcase-banner-copy-col p {
   font-size: 1.05rem;
   line-height: 1.65;
   color: #4B5563;
   margin-bottom: 0;
+}
+
+.closing-callout-pill {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.closing-callout-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(18, 87, 162, 0.12);
 }
 
 /* Points List with Vibrant Checkmark Badge */

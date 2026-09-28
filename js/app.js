@@ -603,14 +603,75 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const mbsForm = document.getElementById("mobileBottomSheetForm");
-  if (mbsForm) {
-    mbsForm.addEventListener("submit", () => {
-      if (mbsForm.checkValidity()) {
-        setTimeout(closeMobileSheet, 1200);
-      }
-    });
+    const mbsForm = document.getElementById("mobileBottomSheetForm");
+    if (mbsForm) {
+      mbsForm.addEventListener("submit", () => {
+        if (mbsForm.checkValidity()) {
+          setTimeout(closeMobileSheet, 1200);
+        }
+      });
+    }
+
+  /* ---------------- HERO FORM CARD POPUP (< 576px) ---------------- */
+  const heroFormModal = document.getElementById("heroFormCardModal");
+  const openHeroBtn = document.getElementById("openHeroModalBtn");
+  const closeHeroBtn = document.getElementById("closeHeroModalBtn");
+  const heroBackdrop = document.getElementById("heroModalBackdrop");
+
+  function openHeroFormModal() {
+    if (!heroFormModal) return;
+    heroFormModal.classList.add("is-popup-open");
+    if (heroBackdrop) heroBackdrop.classList.add("is-active");
+    document.body.style.overflow = "hidden";
   }
+
+  function closeHeroFormModal() {
+    if (!heroFormModal) return;
+    heroFormModal.classList.remove("is-popup-open");
+    if (heroBackdrop) heroBackdrop.classList.remove("is-active");
+    document.body.style.overflow = "";
+  }
+
+  if (openHeroBtn) openHeroBtn.addEventListener("click", openHeroFormModal);
+  if (closeHeroBtn) closeHeroBtn.addEventListener("click", closeHeroFormModal);
+  if (heroBackdrop) heroBackdrop.addEventListener("click", closeHeroFormModal);
+
+  // Close when tapping outside the card on mobile
+  document.addEventListener("click", (e) => {
+    if (window.innerWidth <= 576 && heroFormModal && heroFormModal.classList.contains("is-popup-open")) {
+      if (!heroFormModal.contains(e.target) && openHeroBtn && !openHeroBtn.contains(e.target)) {
+        closeHeroFormModal();
+      }
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && heroFormModal && heroFormModal.classList.contains("is-popup-open")) {
+      closeHeroFormModal();
+    }
+  });
+
+  // Only visible within the hero section viewport on mobile (<576px)
+  const heroSectionEl = document.querySelector(".hero");
+  function updateHeroTriggerVisibility() {
+    if (!openHeroBtn || !heroSectionEl) return;
+    if (window.innerWidth > 576) return;
+
+    const heroRect = heroSectionEl.getBoundingClientRect();
+    // Visible while hero is in viewport
+    if (heroRect.bottom > 120 && heroRect.top < window.innerHeight) {
+      openHeroBtn.classList.remove("is-hidden");
+    } else {
+      openHeroBtn.classList.add("is-hidden");
+    }
+  }
+
+  window.addEventListener("scroll", updateHeroTriggerVisibility, { passive: true });
+  window.addEventListener("resize", updateHeroTriggerVisibility, { passive: true });
+  if (typeof lenis !== "undefined" && lenis.on) {
+    lenis.on("scroll", updateHeroTriggerVisibility);
+  }
+  updateHeroTriggerVisibility();
 
   /* ---------------- BOTTOM CENTER IOS GLASS CTA OVERLAY ---------------- */
   const bottomGlassBar = document.getElementById("bottomGlassCtaBar");

@@ -42,19 +42,20 @@
       "description": "Full alignment with Indian labor codes, Form 16, PF ECR, and state tax rules"
     }
   ],
+
   "modules": [
     {
       "id": "dashboard",
       "num": "01",
       "title": "Dashboard",
       "badge": "Central Command System",
-      "summary": "Real-time visibility across attendance, pending approvals, company announcements, and self-service actions.",
-      "description": "Transforms high-level workforce governance into a clean, actionable command center. Executive leadership monitors real-time headcounts, shift coverage heatmaps, payroll cut-off timelines, and department attendance variance from a single screen. Employees enjoy an instantaneous self-service terminal to clock in, verify punch logs, apply for time-off, and download tax slips.",
+      "summary": "A Dashboard That Knows What Matters to You - Not everyone needs to see the same thing.",
+      "description": "That's why AdoTeam gives users a personalised dashboard based on their role. Employees can quickly see their leave balance, payslips, tasks, and important updates, and the HR teams get a bigger picture of employee information and workforce activities.",
       "features": [
+        "Role-based personalized dashboard for employees, managers & executives",
         "Live presence radar with department-wise clock-in status",
         "Instant employee quick-actions: 1-Tap Punch, Leave Apply, Pay Slip",
-        "Automated HR bulletin board & company-wide milestone alerts",
-        "Role-based drilldown access for CXOs, HR Managers & Staff"
+        "Automated HR bulletin board & company-wide milestone alerts"
       ],
       "statVal": "100%",
       "statLbl": "Real-Time Roster Visibility",
@@ -62,30 +63,12 @@
       "icon": "fa-gauge-high"
     },
     {
-      "id": "employee-management",
-      "num": "02",
-      "title": "Employee Management",
-      "badge": "Paperless Core HR",
-      "summary": "Single source of truth from digital offer letters to paperless onboarding, KYC verification, and exit audits.",
-      "description": "Consolidate fragmented paperwork and siloed spreadsheets into a high-security encrypted workforce repository. Manage custom designation hierarchies, digital document vaults (Aadhaar, PAN, Passport, Education), compensation breakdown matrices, asset allocations (laptops, SIMs, access tokens), and automated probation milestones.",
-      "features": [
-        "100% paperless digital onboarding with e-sign verification",
-        "Encrypted KYC & confidential document repository",
-        "Hardware & software asset allocation audit trails",
-        "Automated probation tracking & 3-step exit clearance"
-      ],
-      "statVal": "3x Faster",
-      "statLbl": "Employee Onboarding Speed",
-      "pexelsQuery": "Employee Management HR onboarding corporate professional staff",
-      "icon": "fa-users-gear"
-    },
-    {
       "id": "attendance-management",
-      "num": "03",
-      "title": "Attendance Management (Punch In / Punch Out via Geo-Location)",
+      "num": "02",
+      "title": "Attendance Management",
       "badge": "GPS Perimeter & Biometric",
-      "summary": "Hyper-accurate clock-ins powered by 10m–500m GPS geo-fencing, facial selfie verification, and hardware sync.",
-      "description": "Completely eliminates buddy-punching and hardware queue bottlenecks across on-site offices, remote workers, and multi-location field forces. Employees punch directly on mobile within approved geographic perimeters with biometric liveness validation, while on-premise biometric fingerprint/face scanners sync seamlessly in real time.",
+      "summary": "Know Who's In, Who's Out and What's Happening - Attendance shouldn't mean manually checking one spreadsheet after another.",
+      "description": "AdoTeam works as employee attendance tracking software, giving HR teams real-time visibility into attendance and punctuality. Attendance information can also connect with leave and payroll processes. This helps reduce manual cross-checking and keep records more organized.",
       "features": [
         "Customizable GPS geo-fenced perimeters (10m to 500m radius)",
         "Facial recognition & anti-spoofing selfie validation",
@@ -99,11 +82,11 @@
     },
     {
       "id": "leave-management",
-      "num": "04",
+      "num": "03",
       "title": "Leave Management & Approval",
       "badge": "Automated Multi-Tier Engine",
-      "summary": "Multi-tier approval hierarchies, dynamic leave accruals, policy compliance, and automated clash prevention.",
-      "description": "Tailor company time-off policies to perfection with customized rules for Earned/Privilege, Casual, Sick, Maternity, Paternity, and Compensatory Offs. The system automatically computes pro-rated monthly accruals, year-end carry forwards, encashment payouts, and sandwich weekend logic while alerting managers to project coverage clashes.",
+      "summary": "Leave Requests Without the Email Chase - \"Can you approve my leave?\" \"How many leaves do I have left?\" \"Did my leave get approved?\"",
+      "description": "HR teams hear these questions all the time. AdoTeam's leave management software makes the process much simpler. Through the platform, employees may submit requests for leave for review and approval by their managers. On top of that, leave balances can be tracked in real time.",
       "features": [
         "Configurable multi-level managerial approval hierarchies",
         "Automated pro-rated monthly accruals & encashment ledgers",
@@ -116,26 +99,101 @@
       "icon": "fa-calendar-check"
     },
     {
-      "id": "regularization-management",
-      "num": "05",
-      "title": "Regularization Management",
-      "badge": "Transparent Dispute Resolution",
-      "summary": "Frictionless adjustment requests for missed punches, client on-duty visits, and overtime approvals.",
-      "description": "Ensures employees are never penalized for biometric glitch delays, field meetings, or power cuts. Staff submit regularization requests with mandatory reason codes, geo-tagged client location proof, and manager approval workflows with strict monthly quota controls to prevent policy exploitation.",
+      "id": "payroll-salary",
+      "num": "04",
+      "title": "Salary Slip / Payroll",
+      "badge": "100% Error-Free Tax Engine",
+      "summary": "Payroll Without Any Headache - AdoTeam's payroll management software brings payroll-related information into one connected HR system.",
+      "description": "The platform also supports Provident Fund deduction calculation and tracking, helping businesses maintain organized payroll records. Payslips, Just a Click Away - \"Can you send me my payslip?\" is such a small request, isn't it? The problem arises when dozens of employees ask the same question, and those small requests add up. With AdoTeam's digital payslip software, employees can view and download their payslips directly from their dashboard.",
       "features": [
-        "Client site On-Duty (OD) travel logging with geo-coordinates",
-        "Missed punch regularizations with audit-verified timestamps",
-        "Monthly regularization quotas to uphold attendance discipline",
-        "Complete compliance trail with timestamps & manager remarks"
+        "1-Click automated payroll calculation from live attendance & leaves",
+        "Statutory compliance: PF ECR, ESIC, PT slabs & TDS deductions",
+        "Password-protected encrypted PDF pay slip generation & email dispatch",
+        "Direct corporate bank payout batch file generation (NEFT/RTGS)"
       ],
-      "statVal": "-85%",
-      "statLbl": "Attendance Dispute Tickets",
-      "pexelsQuery": "Regularization Management dispute approval attendance audit office tablet",
-      "icon": "fa-clipboard-check"
+      "statVal": "10 Min",
+      "statLbl": "Full Payroll Run Execution",
+      "pexelsQuery": "Salary Slip Payroll accounting tax financial report spreadsheet laptop",
+      "icon": "fa-file-invoice-dollar"
+    },
+    {
+      "id": "employee-management",
+      "num": "05",
+      "title": "Employee Management",
+      "badge": "Paperless Core HR",
+      "summary": "Keep Every Employee Document Where It Belongs - Many times, important documents of your employees get buried inside a folder that you named \"Final_Final_2.\" Or they get lost in someone's inbox.",
+      "description": "With AdoTeam's employee document management system, you'll know where to look. We have created a centralized place where you can store all important employee files and contracts.",
+      "features": [
+        "100% paperless digital onboarding with e-sign verification",
+        "Encrypted KYC & confidential document repository",
+        "Hardware & software asset allocation audit trails",
+        "Automated probation tracking & 3-step exit clearance"
+      ],
+      "statVal": "3x Faster",
+      "statLbl": "Employee Onboarding Speed",
+      "pexelsQuery": "Employee Management HR onboarding corporate professional staff",
+      "icon": "fa-users-gear"
+    },
+    {
+      "id": "employee-self-service",
+      "num": "06",
+      "title": "Employee Self-Service Portal",
+      "badge": "Employee Empowerment",
+      "summary": "Let Employees Manage the Little Things - AdoTeam's employee self-service portal gives employees more control over the information they use on a daily basis.",
+      "description": "They can use the following features: View their personal information. Update relevant profile details. Check leave balances. Access payslips. View tasks. Stay updated with notifications. Keep Employee Information Fresh - People move. Phone numbers change. Addresses get updated. Keeping every employee record accurate and updated shouldn't always require an HR ticket. With AdoTeam, employees can view and update relevant personal information through their profiles. That means fewer small admin tasks for HR and more up-to-date employee records.",
+      "features": [
+        "View personal information",
+        "Update relevant profile details",
+        "Check leave balances",
+        "Access payslips",
+        "View tasks",
+        "Stay updated with notifications"
+      ],
+      "statVal": "Reduced",
+      "statLbl": "HR Administrative Workload",
+      "pexelsQuery": "Employee Self Service portal dashboard mobile app profile management",
+      "icon": "fa-person-circle"
+    },
+    {
+      "id": "task-management",
+      "num": "07",
+      "title": "Task Management & Assignment",
+      "badge": "Ownership & Accountability",
+      "summary": "Give Every Task an Owner - How many times has a task been forgotten by everyone?",
+      "description": "To solve questions like What's pending, Who's responsible, What's been updated, and What's due next, AdoTeam has a task assignment feature. With this, managers can assign work, track progress, and stay on top of deadlines effortlessly.",
+      "features": [
+        "Easy task creation and assignment to team members",
+        "Priority levels and deadline tracking",
+        "Real-time progress updates and status monitoring",
+        "Task completion notifications and reminders",
+        "Searchable task history and completion records"
+      ],
+      "statVal": "100%",
+      "statLbl": "Task Visibility & Tracking",
+      "pexelsQuery": "Task Management assignment project management checklist work tracking",
+      "icon": "fa-tasks"
+    },
+    {
+      "id": "calendar",
+      "num": "08",
+      "title": "Calendar",
+      "badge": "24/7 Scheduling Engine",
+      "summary": "Never Miss the Dates That Matter - Some dates like A team member's birthday, A work anniversary, A company event, A holiday, or A client meeting are just too important to miss.",
+      "description": "AdoTeam's event tracker brings these dates into one shared space. On top of that, notifications and meeting alerts help keep everyone informed.",
+      "features": [
+        "Multi-branch state-wise public and optional holiday schedules",
+        "Rotational 24/7 shift roster management with break differential rules",
+        "Calendar synchronization with Google Calendar & MS Outlook",
+        "Automated work anniversary, birthday & achievement reminders"
+      ],
+      "statVal": "Zero",
+      "statLbl": "Uncovered Shift Gaps",
+      "pexelsQuery": "Calendar schedule shift planning digital schedule tablet executive office",
+      "icon": "fa-calendar-days"
     },
     {
       "id": "team-mates",
-      "num": "06",
+      "num": "09",
       "title": "Team Mates",
       "badge": "Real-Time Collaboration",
       "summary": "Interactive organizational chart, reporting tree structures, live status indicators, and skillset index.",
@@ -152,48 +210,12 @@
       "icon": "fa-network-wired"
     },
     {
-      "id": "calendar",
-      "num": "07",
-      "title": "Calendar",
-      "badge": "24/7 Scheduling Engine",
-      "summary": "Multi-location holiday calendars, rotational 24/7 shift rosters, coverage planning, and milestone alerts.",
-      "description": "Effortlessly manage complex 24/7 multi-shift operations, rotational rosters, split shifts, and customized regional holiday schedules for offices across multiple states and international zones. Sync shift schedules automatically with Google Calendar, Microsoft Outlook, and Apple iCal.",
-      "features": [
-        "Multi-branch state-wise public and optional holiday schedules",
-        "Rotational 24/7 shift roster management with break differential rules",
-        "Calendar synchronization with Google Calendar & MS Outlook",
-        "Automated work anniversary, birthday & achievement reminders"
-      ],
-      "statVal": "Zero",
-      "statLbl": "Uncovered Shift Gaps",
-      "pexelsQuery": "Calendar schedule shift planning digital schedule tablet executive office",
-      "icon": "fa-calendar-days"
-    },
-    {
-      "id": "payroll-salary",
-      "num": "08",
-      "title": "Salary Slip / Payroll",
-      "badge": "100% Error-Free Tax Engine",
-      "summary": "1-Click automated salary disbursement, statutory deductions (PF, ESIC, PT, TDS), and encrypted pay slips.",
-      "description": "Eliminate month-end payroll nightmares by seamlessly auto-fetching verified attendance, approved leaves, and loss of pay (LOP) deductions directly into payroll. Instantly calculate Basic, HRA, Special Allowances, PF ECR, ESIC, Professional Tax, TDS Form 16, and generate corporate bank payout files in minutes.",
-      "features": [
-        "1-Click automated payroll calculation from live attendance & leaves",
-        "Statutory compliance: PF ECR, ESIC, PT slabs & TDS deductions",
-        "Password-protected encrypted PDF pay slip generation & email dispatch",
-        "Direct corporate bank payout batch file generation (NEFT/RTGS)"
-      ],
-      "statVal": "10 Min",
-      "statLbl": "Full Payroll Run Execution",
-      "pexelsQuery": "Salary Slip Payroll accounting tax financial report spreadsheet laptop",
-      "icon": "fa-file-invoice-dollar"
-    },
-    {
       "id": "analytics-reports",
-      "num": "09",
+      "num": "10",
       "title": "Analytics & Reports",
       "badge": "Strategic HR Intelligence",
-      "summary": "Predictive attrition analytics, overtime spend heatmaps, diversity metrics, and 40+ exportable reports.",
-      "description": "Equip executive leadership and CHROs with high-impact workforce intelligence. Track attrition patterns, departmental salary spending, absenteeism trends, gender diversity ratios, and generate statutory audit reports in Excel and PDF format with zero manual assembly.",
+      "summary": "Turn HR Data Into Useful Insights - AdoTeam's HR analytics software gives leadership and HR teams greater visibility into workforce trends, attendance patterns, and performance information.",
+      "description": "Now you can get insights for questions like: Are attendance patterns changing? What does workforce activity look like? How are performance metrics moving?",
       "features": [
         "Department-level payroll, overtime & cost center expenditures",
         "Early warning attrition risk & absenteeism trend indicators",
@@ -204,6 +226,24 @@
       "statLbl": "Audit-Ready Export Templates",
       "pexelsQuery": "Analytics & Reports business intelligence charts graphs data presentation",
       "icon": "fa-chart-pie"
+    },
+    {
+      "id": "regularization-management",
+      "num": "11",
+      "title": "Regularization Management",
+      "badge": "Transparent Dispute Resolution",
+      "summary": "Frictionless adjustment requests for missed punches, client on-duty visits, and overtime approvals.",
+      "description": "Ensures employees are never penalized for biometric glitch delays, field meetings, or power cuts. Staff submit regularization requests with mandatory reason codes, geo-tagged client location proof, and manager approval workflows with strict monthly quota controls to prevent policy exploitation.",
+      "features": [
+        "Client site On-Duty (OD) travel logging with geo-coordinates",
+        "Missed punch regularizations with audit-verified timestamps",
+        "Monthly regularization quotas to uphold attendance discipline",
+        "Complete compliance trail with timestamps & manager remarks"
+      ],
+      "statVal": "-85%",
+      "statLbl": "Attendance Dispute Tickets",
+      "pexelsQuery": "Regularization Management dispute approval attendance audit office tablet",
+      "icon": "fa-clipboard-check"
     }
   ],
   "caseStudies": [
